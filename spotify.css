@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+nav {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 8px 16px;
+    background-color: black;
+    color: white;
+    flex-wrap: wrap; 
+}
+
+nav ul li {
+    padding: 0 12px;
+    cursor: pointer;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    margin-right: auto; 
+}
+
+.brand img {
+    width: 32px;
+    margin-right: 8px;
+}
+
+
+.container {
+    min-height: 70vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 10px;
+    background-image: url('../s_image/song.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 375px;
+    padding: 20px;
+    gap: 20px;
+}
+
+
+.songitem-container {
+    margin-top: 20px;
+}
+
+.songItem {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    width: 80%;
+    margin: 10px 0;
+    border-radius: 34px;
+    padding: 0 10px;
+    transition: transform 0.2s;
+}
+
+.songItem:hover {
+    transform: scale(1.02);
+}
+
+.songItem img {
+    width: 43px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.songname {
+    flex: 1;
+}
+
+.timestamp {
+    margin: 0 15px;
+}
+
+.timestamp i {
+    cursor: pointer;
+}
+
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+#myProgessBar {
+    cursor: pointer;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.icons {
+    display: flex;
+    gap: 20px;
+    font-size: 1.5rem;
+}
+
+.icons i {
+    cursor: pointer;
+}
+
+.songinfo {
+    position: absolute;
+    left: 20px;
+    bottom: 60px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.songinfo img {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .songItem {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .brand {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    #myProgessBar {
+        width: 90%;
+    }
+
+    .icons {
+        font-size: 1.2rem;
+        gap: 15px;
+    }
+
+    .songinfo {
+        font-size: 12px;
+        bottom: 80px;
+        left: 10px;
+    }
+}
+
+
+
+
+
+
+
